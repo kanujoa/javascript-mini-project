@@ -1,0 +1,30 @@
+body {
+  text-align: center;
+  background-color: #ffdac4;
+}
+
+#title {
+  margin: 0;
+  padding: 100px 0 0;
+}
+
+#info {
+  margin: 0;
+  padding: 100px 0 0;
+}
+
+#playButton {
+  margin: 50px 0 0;
+  border: 0;
+  outline: 0;
+  width: 180px;
+  height: 80px;
+  background-color: #d5e9dc;
+  font-size: 25px;
+  box-shadow: 0 5px 5px 0;
+}
+
+#tip {
+  margin: 0;
+  padding: 50px 0 0;
+}
