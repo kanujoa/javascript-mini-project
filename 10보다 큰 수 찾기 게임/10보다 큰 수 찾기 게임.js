@@ -5,8 +5,8 @@ const num_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
 const array = [];
 
 while (array.length < 10) {
-  let length = num_list.length;
-  let i = Math.floor(Math.random() * length);
+  const length = num_list.length;
+  const i = Math.floor(Math.random() * length);
   array.push(num_list[i]);
   num_list.splice(i, 1);
 }
@@ -20,7 +20,7 @@ function setQuiz() {
   h1_2.style = "padding: 30px; margin: 70px 0 0; border: 3px solid #f08080; border-radius: 10px;"
   const createH3 = document.createElement("h3");
   const h3 = div.appendChild(createH3);
-  h3.innerText = "❗정답 입력 시 공백 한 칸(스페이스바 한 번만 누르기)으로 숫자 사이를 구분해야 정답으로 인정됩니다.❗";
+  h3.innerText = "❗정답 입력 시 공백 한 칸(스페이스바 한 번만 누르기)으로 숫자 사이를 구분해서 문제에서 주어진 순서대로 입력해야 정답으로 인정됩니다.❗";
   h3.style = "margin: 50px 0 0; background-color: #e5d2e9;";
 }
 
@@ -52,18 +52,18 @@ playButton.onclick = function startGame() {
   const getInput = document.querySelector("input");
   
   function checkAnswer() {
-    let smallerThanTen = [];
+    const smallerThanTen = [];
     for (let i = 0; i <= array.length; i++) {
       if (array[i-1] > 10) {
         smallerThanTen.push(array[i-1]);
       }
     }
-    let answerToString = smallerThanTen.join(" ");
+    const answerToString = smallerThanTen.join(" ");
     let response = true;
     if (answerToString === getInput.value) {
       alert("정답입니다😊");
       while (response) {
-        let replay = prompt("다시 플레이 하시겠습니까? (네 / 아니요)");
+        const replay = prompt("다시 플레이 하시겠습니까? (네 / 아니요)");
         if (replay === "네") {
           location.reload();
           response = false;
@@ -77,7 +77,7 @@ playButton.onclick = function startGame() {
     } else {
       alert("오답입니다😢 (입력 방식이 잘못되었을 수도 있으니 정답 인정 기준을 확인해 주세요!)");
       while(response) {
-        let retry = prompt("재도전 하시겠습니까? (네 / 아니요)");
+        const retry = prompt("재도전 하시겠습니까? (네 / 아니요)");
         if (retry === "네") {
           response = false;
         } else if (retry === "아니요" || retry === null) {
