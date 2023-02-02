@@ -4,16 +4,147 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>menu list</title>
+  <title>수강신청 장바구니</title>
   <link rel="stylesheet" href="css/mainpage.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Libre+Baskerville:wght@400;700&family=Noto+Serif+Armenian&display=swap');
-  </style>
 </head>
 <body>
-  <div id = "main">
-    <h1 id="title"><b>수강신청</b></h1>
-  </div>
+  <head>
+    <h1 id="title"><b>컴퓨터과학과 1학기 수강신청 장바구니</b></h1>
+  </head>
+  <main id = "main">
+    <section id="select_subject">
+      <form id="grade_box">
+        <fieldset for="fieldset_grade">
+          <legend><b>학년</b></legend>
+          <select name="grade" id="grade_select">
+            <option value="">---학년을 선택해 주세요.---</option>
+            <option value="1학년">1학년</option>
+            <option value="2학년">2학년</option>
+            <option value="2학년">3학년</option>
+            <option value="2학년">4학년</option>
+          </select>
+          <button id="select_grade" class="select_button">선택</button>
+        </fieldset>
+      </form>
+      <form id="major_box">
+        <fieldset id="fieldset_major">
+          <legend><b>전공</b></legend>
+          <select name="major" id="major_select_first_grade">
+            <option value="">---전공과목을 선택해 주세요.---</option>
+          </select>
+          <select name="major" id="major_select_first_grade" class="hidden">
+            <option value="">---(1학년)전공과목을 선택해 주세요.---</option>
+            <option value="C">C 프로그래밍</option>
+            <option value="Python">Python 프로그래밍</option>
+            <option value="ubiquitarius">유비쿼터스 컴퓨팅 개론</option>
+            <option value="understanding_computer">컴퓨터의 이해</option>
+          </select>
+          <select name="major" id="major_select_second_grade" class="hidden">
+            <option value="">---(2학년)전공과목을 선택해 주세요.---</option>
+            <option value="Java">Java 프로그래밍</option>
+            <option value="HTML5">HTML5 웹프로그래밍</option>
+            <option value="discrete">이산수학</option>
+          </select>
+          <select name="major" id="major_select_third_grade" class="hidden"> 
+            <option value="">---(3학년)전공과목을 선택해 주세요.---</option>
+            <option value="OS">운영체제</option>
+            <option value="digital_circuit">디지털논리회로</option>
+            <option value="database">데이터베이스 시스템</option>
+            <option value="algorithm">알고리즘</option>
+            <option value="AI">인공지능</option>
+          </select>
+          <select name="major" id="major_select_fourth_grade" class="hidden">
+            <option value="">---(4학년)전공과목을 선택해 주세요.---</option>
+            <option value="grapics">컴퓨터그래픽스</option>
+            <option value="network">정보통신망</option>
+            <option value="software">소프트웨어공학</option>
+            <option value="app">모바일 앱 프로그래밍</option>
+            <option value="secure">컴퓨터보안</option>
+          </select>
+          <button id="select_major" class="select_button">선택</button>
+        </fieldset>
+      </form>
+      <form id="liberal_arts_box">
+        <fieldset id="fieldset_liberal_arts">
+          <legend><b>교양</b></legend>
+          <select name="liberal_arts">
+            <option value="">---교양과목을 선택해 주세요.---</option>
+            <option value="writing">글쓰기</option>
+            <option value="classic">동서양고전의이해</option>
+            <option value="life_environment">생명과 환경</option>
+            <option value="world_history">세계사</option>
+            <option value="law">생활법률</option>
+            <option value="psychology">기초심리학</option>
+            <option value="economic">생활속의 경제</option>
+            <option value="philosophy">철학의 이해</option>
+          </select>
+          <button id="select_liberal_arts" class="select_button">선택</button>
+        </fieldset>
+      </form>
+      <form id="special_program_box">
+        <fieldset id="fieldset_special_program">
+          <legend><b>단기특강</b></legend>
+          <div class="special_program">
+            <input type="checkbox" name="special_program" value="ai_data">
+            <span>인공지능 & 빅데이터 분석</span>
+          </div>
+          <div class="special_program">           
+            <input type="checkbox" name="special_program" value="ceo">
+            <span>청년 CEO 육성교육</span>
+          </div>
+          <div class="special_program">
+            <input type="checkbox" name="special_program" value="foreign_lang">
+            <span>외국어 능력 강화 프로그램</span>
+          </div>
+          <div class="special_program">          
+            <input type="checkbox" name="special_program" value="no">
+            <span>신청 X</span>
+          </div>
+        </fieldset>
+      </form>
+      <form id="certificate_program_box">
+        <fieldset id="fieldset_certificate_program">
+          <legend><b>자격증 취득 프로그램</b></legend>
+          <div class="certificate_program">
+            <input type="radio" name="certificate_program" value="information_processing">
+            <span>정보처리기사</span>
+          </div>
+          <div class="certificate_program">
+            <input type="radio" name="certificate_program" value="big_data_analysis">
+            <span>빅데이터분석기사</span>
+          </div>
+          <div class="certificate_program">
+            <input type="radio" name="certificate_program" value="ADSP">
+            <span>데이터 분석 준전문가</span>
+          </div>
+          <div class="certificate_program">
+            <input type="radio" name="certificate_program" value="no">
+            <span>신청 X</span>
+          </div>
+        </fieldset>
+      </form>
+    </section>
+    <section id="apply_list">
+      <table>
+        <thead>
+          <tr>
+            <th><b class="thead">분 류</b></th>
+            <th><b class="thead">과 목</b></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="thead">전공</th>
+            <th class="thead">컴퓨터공학</th>
+          </tr>
+          <tr>
+            <th class="thead">전공</th>
+            <th class="thead">컴퓨터공학</th>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
   <script src="js/mainpage.js"></script>
 </body>
 </html>
