@@ -6,6 +6,6 @@
 <h3>:pushpin: 최대공약수 계산기 (https://astonishing-truffle-fcdf99.netlify.app)</h3>
 <br><br>
 
-<h1><a>https://www.vanillajavascriptprojects.com/</a> 참고<h1>
+<h2><a>https://www.vanillajavascriptprojects.com/</a> 참고<h2>
 
 <h3>:pushpin: Color Flipper (https://teal-crumble-e5c400.netlify.app)</h3>
