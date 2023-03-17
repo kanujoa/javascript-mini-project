@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO</title>
+  <!--favicon img-->
+  <link rel="shortcut icon" href="image/favicon-32x32.png">     
+  <!--font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <!--css file-->
+  <link rel="stylesheet" href="css/styles.css">     
+</head>
+<body>
+  <div id="wrapper">
+    <div id="container">
+      <div id="grid-left">
+        <div id="title-box">     <!--title-->
+          <h1 id="title">ToDoList</h1>
+          <img src="image/title-deco.png" id="title-decoration" alt="title-decoration">
+        </div>
+        <form id="name">     <!--write name-->
+          <input placeholder="이름을 작성하세요📛" maxlength="15" spellcheck="false">
+          <button id="name-check">✔️</button>
+        </form>
+        <form id="write-todo">     <!--write todo-->
+          <input placeholder="할 일을 작성하세요🗒️" spellcheck="false">
+          <button id="todo-check">✏️</button>
+        </form>
+        <form id="search">     <!--search engine-->
+          <input placeholder="검색어를 입력해 보세요🙂" spellcheck="false">
+          <button id="search-btn">
+            <img src="image/search-button.png" class="search-btn-img" alt="Search">
+          </button>
+        </form>
+        <div id="weather"></div>     <!--weather-->
+        <div id="supplement">     <!--social networking-->
+          <ul id="social">
+            <li>
+              <a href="https://ko-kr.facebook.com/">
+                <img src="image/facebook.png" class="social-logo" alt="Facebook">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/?hl=ko">
+                <img src="image/instagram.png" class="social-logo" alt="Instagram">
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/">
+                <img src="image/twitter.png" class="social-logo" alt="Twitter">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.google.co.kr/">
+                <img src="image/google.png" class="social-logo" alt="Google">
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/">
+                <img src="image/github.png" class="social-logo" alt="Github">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="grid-right">
+        <div id="clock">13:00:00</div>     <!--clock-->
+        <div id="show-todo"></div>     <!--show todo list--> 
+        <div id="quote"></div>     <!--random quote-->
+      </div>
+    </div>
+  </div>
+  <script src="js/greeting.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/weather.js"></script>
+</body>
+</html>
