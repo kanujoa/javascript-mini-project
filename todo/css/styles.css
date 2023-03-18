@@ -19,6 +19,12 @@ input {
 .hidden {
   display: none;
 }
+.fix {
+  margin: 0 auto;
+}
+.inline-block {
+  display: inline-block;
+}
 #wrapper {
   display: flex;
   min-height: 100vh;
@@ -31,10 +37,10 @@ input {
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  padding: 50px;
+  padding: 40px;
 }
 #title-box {
-  height: 120px;
+  height: 105px;
 }
 #title {
   margin: 0;
@@ -60,16 +66,31 @@ input {
   border: 2px solid rgba(153, 153, 153, 0.7);
   border-radius: 10px;
   font-size: 20px;
+  margin-bottom: 5px;
 }
 #name-check {
   font-size: 23px;
-  transition-duration: 0.7s;
   cursor: pointer;
 }
 #name-check:hover {
-  font-size: 28px;
-  transition-duration: 0.7s;
+  animation: rotation 0.7s;
 } 
+@keyframes rotation{
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.greeting {
+  margin-top: 0;
+  margin-bottom: 5.333px;
+  text-shadow: #FC0 1px 0 10px;
+  position: relative;
+  top: -10px;
+  font-size: 40px;
+}
 #write-todo {
   padding-bottom: 15px;
 }
@@ -82,17 +103,23 @@ input {
 }
 #todo-check {
   font-size: 23px;
-  transition-duration: 0.7s;
   cursor: pointer;
 }
 #todo-check:hover {
-  font-size: 28px;
-  transition-duration: 0.7s;
+  animation: rotation 0.7s;
+}
+@keyframes rotation{
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 #search input {
   width: 360px;
   height: 40px;
-  margin-top: 30px;
+  margin-top: 20px;
   border: none;
   border-bottom: 2px solid rgba(153, 153, 153, 0.7);
   font-size: 20px;
@@ -117,21 +144,63 @@ input {
   }
 }
 #weather h1 {
-  margin-bottom: 0;
-  margin-top: 50px;
+  position: relative;
+  margin: 0;
+  margin-top: 40px;
 }
 .weather-icon {
   width: 100px;
   height: 100px;
 }
 #weather h2 {
+  position: relative;
+  bottom: 75px;
+  left: 140px;
+}
+#daily-check {
+  margin-top: -50px;
+}
+#daily-todo {
+  padding: 0;
+  list-style: none;
   margin: 0;
+  position: relative;
+  bottom: 5px;
+}
+p {
+  margin: 0;
+  padding: 5px 20px 5px 5px;
+  font-size: 20px;
+  position: relative;
+  bottom: 10px;
+}
+p:hover {
+  color: #e66666;
+}
+#daily-todo img {
+  width: 35px;
+}
+p, #daily-todo img {
+  cursor: pointer;
+}
+.daily-complete {     /* 주목! (JS에서 이용할 것)*/
+  text-decoration: line-through;
+  text-decoration-color: #e66666;
+  text-decoration-style: wavy;
+}
+#supplement {
+  height: 50px;
+  position: relative;
+  bottom: -15px;
 }
 #social {
+  padding: 0;
   list-style: none;
+  margin: 0;
 }
 #social li {
   display: inline-block;
+  padding-right: 20px;
 }
 .social-logo {
   width: 40px;

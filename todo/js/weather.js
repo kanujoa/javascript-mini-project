@@ -19,11 +19,10 @@ const API_KEY = "5d41111514daf5c7fd6c582ac20937d6";
         const weatherIcon = weatherBox.appendChild(createImg);
         weatherIcon.classList.add("weather-icon");
         weatherIcon.src = `http://openweathermap.org/img/w/${json.weather[0].icon}.png`     // 날씨에 해당하는 아이콘 주소 넣기
-        const createH1_2 = document.createElement("h1");
-        const temp = weatherBox.appendChild(createH1_2);
+        const createH2 = document.createElement("h2");
+        const temp = weatherBox.appendChild(createH2);
         temp.style.margin = 0;
         temp.textContent = `${Math.floor(json.main.temp - 273.15)}°C / ${json.weather[0].description}`;     // 그 지역의 온도, 날씨 글자로 나타냄
-        console.log(json);
       })
       .catch(error => {
         alert("날씨 정보를 가져올 수 없습니다.😥");
