@@ -93,6 +93,8 @@ input {
 }
 #write-todo {
   padding-bottom: 15px;
+  position: relative;
+  top: 12px;
 }
 #write-todo input{
   width: 360px;
@@ -184,9 +186,9 @@ p, #daily-todo img {
   cursor: pointer;
 }
 .daily-complete {     /* 주목! (JS에서 이용할 것)*/
+  color: #e66666;
   text-decoration: line-through;
   text-decoration-color: #e66666;
-  text-decoration-style: wavy;
 }
 #supplement {
   height: 50px;
@@ -212,4 +214,26 @@ p, #daily-todo img {
   width: 45px;
   height: 45px;
   transition-duration: 0.7s;
+}
+#grid-right {
+  margin-left: 20px;
+}
+#time {
+  height: 73px;
+  background-color: aliceblue;
+  border-radius: 15px;
+  margin: 0;
+  padding: 10px 55px;
+}
+#clock {
+  font-size: 45px;
+  margin: 0;
+  position: relative;
+}
+#calendar {
+  font-size: 30px;
+  margin: 0;
+  position: relative;
+  bottom: 42px;
+  left: 320px;
 }

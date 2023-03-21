@@ -40,19 +40,19 @@
         <div id="daily-check">     <!--daily check-->
           <h1>Daily Check</h1>
           <ul id="daily-todo">
-            <li id="vegetable">
+            <li id="eat-vegetable" class="daily">
               <p class="inline-block">eat vegetable</p>
               <img src="image/vegetable.png" alt="eat vegetable">
             </li>
-            <li id="work-out">
+            <li id="work-out" class="daily">
               <p class="inline-block">work out</p>
               <img src="image/work out.png" alt="work out">
             </li>
-            <li id="study">
+            <li id="study" class="daily">
               <p class="inline-block">study</p>
               <img src="image/study.png" alt="study">
             </li>
-            <li id="cleaning">
+            <li id="cleaning" class="daily">
               <p class="inline-block">cleaning</p>
               <img src="image/cleaning.png" alt="cleaning">
             </li>
@@ -89,7 +89,10 @@
         </div>
       </div>
       <div id="grid-right">
-        <div id="clock">13:00:00</div>     <!--clock-->
+        <div id="time">
+          <h1 id="clock">clock</h1>     <!--clock-->
+          <h3 id="calendar">calendar</h3>
+        </div>
         <div id="show-todo"></div>     <!--show todo list--> 
         <div id="quote"></div>     <!--random quote-->
       </div>
@@ -98,5 +101,8 @@
   <script src="js/greeting.js"></script>
   <script src="js/search.js"></script>
   <script src="js/weather.js"></script>
+  <script src="js/daily_check.js"></script>
+  <script src="js/clock.js"></script>
+  <script src="js/background.js"></script>
 </body>
 </html>
