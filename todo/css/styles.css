@@ -320,6 +320,9 @@ table button {
   width: 45px;
   padding: 0;     /* todo 에서 button 부분의 padding을 없애야지 애매한 부분을 클릭해도 버튼 클릭 처리가 되므로 이상한 현상이 일어나지 않는다. */
 }
+.todo {
+  width: 464.83px;
+}
 .todo-complete img {
   width: 25px;
   height: 25px;
