@@ -21,7 +21,7 @@ function handlespeechBubble(e) {     // 이벤트를 매개변수로 함.
 // form에서 todo를 새로 작성할 때 실행되는 함수
 function addTodo(e) {
   e.preventDefault();
-  if (JSON.parse(localStorage.getItem(TODOS)).length < 12) {     // localStoarge todo_app_todos 키의 값이 12개 미만인 경우
+  if (localStorage.getItem(TODOS) === null || JSON.parse(localStorage.getItem(TODOS)).length < 12) {     // localStoarge todo_app_todos 키의 값이 12개 미만인 경우
     let todo = todoInput.value;
     if (todo === "") {
       alert("Please write what you have to do at least one letter.");
@@ -74,8 +74,10 @@ function removeTodo(e) {
   // localStorage에서 지우기
   const todoText = parentTr.children[1].innerText;     // 클릭한 삭제 버튼에 해당하는 라인의 todo를 삭제하기 위해 todo 내용을 담은 todoText 변수가 필요
   localItemRemove(TODOS, todoText);
-  if (JSON.parse(localStorage.getItem(COMPLETED)).includes(todoText)) {     // COMPLETED key의 값에 todoText가 존재할 시에는 (이 조건을 안달아주면 다른 todoText 요소에서 삭제가 일어날 수 있다.)
-    localItemRemove(COMPLETED, todoText);     // COMPLETED key의 값에서도 삭제해 주어야 한다.
+  if (localStorage.getItem(COMPLETED) !== null) {
+    if (JSON.parse(localStorage.getItem(COMPLETED)).includes(todoText)) {     // COMPLETED key의 값에 todoText가 존재할 시에는 (이 조건을 안달아주면 다른 todoText 요소에서 삭제가 일어날 수 있다.)
+      localItemRemove(COMPLETED, todoText);     // COMPLETED key의 값에서도 삭제해 주어야 한다.
+    }
   }
 
   handleEmptyTable();
@@ -83,11 +85,11 @@ function removeTodo(e) {
 
 // todo 내용이 하나도 없을 때 이미지를 띄우기 위한 함수
 function handleEmptyTable() {
-  if (JSON.parse(localStorage.getItem(TODOS)).length > 0) {
-    noPlan.classList.add("hidden");
+  if (localStorage.getItem(TODOS) === null || JSON.parse(localStorage.getItem(TODOS)).length === 0) {
+    noPlan.classList.remove("hidden"); 
   }
-  else{
-    noPlan.classList.remove("hidden");
+  else {
+    noPlan.classList.add("hidden");
   }
 }
 
@@ -95,7 +97,6 @@ function handleEmptyTable() {
 function completedTodo(e) {
   // 완료(check)버튼을 되돌리기 버튼으로 바꿔주기 (스타일 적용 취소가 있을수도 있으니)
   const completeBtn = e.target;
-  console.log(completeBtn);
   completeBtn.innerText = "";
   const createImg = document.createElement("img");
   const undoImg = completeBtn.appendChild(createImg);
