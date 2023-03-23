@@ -15,6 +15,7 @@ button {
 input {
   outline: none;
   padding-left: 10px;
+  background-color: transparent;
 }
 .hidden {
   display: none;
@@ -38,6 +39,11 @@ input {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   padding: 40px;
+  padding-bottom: 30px;
+}
+#grid-right {
+  padding-left: 20px;
+  width: 667.208px;
 }
 #title-box {
   height: 105px;
@@ -67,10 +73,12 @@ input {
   border-radius: 10px;
   font-size: 20px;
   margin-bottom: 5px;
+  background-color: transparent;     /* 이것을 button과 input에 적용해 주면 그 안의 색이 투명하게 되면서 body의 배경색이 그대로 들어가게 된다. width와 height를 0으로 하는 방법은 input에서는 불가하고 색이 진하게 나타나므로 좋지 않다. */
 }
 #name-check {
   font-size: 23px;
   cursor: pointer;
+  background-color: transparent;    
 }
 #name-check:hover {
   animation: rotation 0.7s;
@@ -95,6 +103,7 @@ input {
   padding-bottom: 15px;
   position: relative;
   top: 12px;
+  width: 408px;
 }
 #write-todo input{
   width: 360px;
@@ -106,6 +115,7 @@ input {
 #todo-check {
   font-size: 23px;
   cursor: pointer;
+  background-color: transparent;
 }
 #todo-check:hover {
   animation: rotation 0.7s;
@@ -118,6 +128,31 @@ input {
     transform: rotate(359deg);
   }
 }
+#bubble {      /* 말풍선 몸통 */
+  box-sizing: border-box;
+  position: absolute;
+  width: 307px;
+  left: 0px;
+  top: 55px;
+  background: #484848;
+  color: white;
+  border-radius: 5px;
+  padding: 12px 12.8px;
+  z-index: 100;
+}
+#bubble:after {     /* 말풍선 화살표 */
+  border-bottom: 10px solid #484848;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 0px solid transparent;
+  content: "";
+  position: absolute;
+  bottom: 129px;
+  left: 60px;
+}
+#search {
+  width: 412px;
+}
 #search input {
   width: 360px;
   height: 40px;
@@ -126,6 +161,9 @@ input {
   border-bottom: 2px solid rgba(153, 153, 153, 0.7);
   font-size: 20px;
   position: relative;
+}
+#search-btn {
+  background-color: transparent;
 }
 .search-btn-img {
   width: 35px;
@@ -145,6 +183,9 @@ input {
       transform: rotate(359deg);
   }
 }
+#weather {
+  height: 172px;     /* 날씨 정보를 가져올 수 없을 때에도 공간을 남겨 두기 위해 height를 지정해 줌. */
+}
 #weather h1 {
   position: relative;
   margin: 0;
@@ -161,6 +202,8 @@ input {
 }
 #daily-check {
   margin-top: -50px;
+  position: relative;
+  top: 5px;
 }
 #daily-todo {
   padding: 0;
@@ -193,7 +236,7 @@ p, #daily-todo img {
 #supplement {
   height: 50px;
   position: relative;
-  bottom: -15px;
+  bottom: -20px;
 }
 #social {
   padding: 0;
@@ -215,9 +258,6 @@ p, #daily-todo img {
   height: 45px;
   transition-duration: 0.7s;
 }
-#grid-right {
-  margin-left: 20px;
-}
 #time {
   height: 73px;
   background-color: aliceblue;
@@ -236,4 +276,70 @@ p, #daily-todo img {
   position: relative;
   bottom: 42px;
   left: 320px;
+}
+#show-todo {
+  position: relative;
+  top: 15px;
+  background-color: aliceblue;
+  height: 617px;
+  border-radius: 15px;
+}
+#todo-table {
+  border-collapse: collapse;
+  width: 95%;
+  position: relative;
+  left: 16px;
+  top: 15px;
+}
+#todo-table {
+  border-top: 2.5px solid black;
+  border-bottom: 2.5px solid black;
+}
+th, td {
+  text-align: center;
+  height: 45px;
+  font-size: 23px;
+  border-radius: 7px;
+  border-bottom: 2.5px dotted black;
+}
+.tag {
+  width: 60px;
+}
+.tag, .todo, .button:first-child {
+  border-right: 2.5px double black;
+}
+table button {
+  font-size: 23px;
+  cursor: pointer;
+  font-size: 23px;
+  cursor: pointer;
+  height: 100%;
+  background-color: transparent;
+}
+.button {
+  width: 45px;
+  padding: 0;     /* todo 에서 button 부분의 padding을 없애야지 애매한 부분을 클릭해도 버튼 클릭 처리가 되므로 이상한 현상이 일어나지 않는다. */
+}
+.todo-complete img {
+  width: 25px;
+  height: 25px;
+  position: relative;
+  top: 4px;
+}
+.completed {
+  color: grey;
+  text-decoration: line-through;
+}
+#no-plan {
+  text-align: center;
+  position: relative;
+  top: 35%;
+}
+#no-plan img {
+  width: 80px;
+  height: 80px;
+}
+#quote {
+  position: relative;
+  top: 15px;
 }

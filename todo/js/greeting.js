@@ -17,7 +17,7 @@ function writeNameForm(e) {
   e.preventDefault();
   const username = nameInput.value;
   if (username === "") {
-    alert("이름을 입력해 주세요!");
+    alert("Plese write your name at least one letter.");
   } 
   else {     // form에 username을 올바르게 입력하면 
     paintUsername(username);     // 화면에 보여주고

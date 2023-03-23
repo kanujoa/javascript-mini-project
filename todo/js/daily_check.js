@@ -32,29 +32,29 @@ function textDeco(e) {
 function saveDailyToLocal(click) {     // 만약 daily-complete 스타일이 적용되어 있는 상태라면 그 text를 localstorage에 저장한다.
   // localData를 localStorage로부터 가져옴.
   let localData;
-  if (localStorage.getItem("daily-complete") === null) {
+  if (localStorage.getItem("todo_app_daily-complete") === null) {
     localData = [];
   }
   else {
-    localData = JSON.parse(localStorage.getItem("daily-complete"));
+    localData = JSON.parse(localStorage.getItem("todo_app_daily-complete"));
   }
   // localData를 수정(요소 추가 혹은 삭제)하여 다시 localstorage에 다시 저장함.
   if (click.classList.contains("daily-complete")) {     // click 이벤트로 인해 click(p)의 class에 daily-complete가 존재하게 되었다면
     localData.push(click.innerText);
   }
-  localStorage.setItem("daily-complete", JSON.stringify(localData));
+  localStorage.setItem("todo_app_daily-complete", JSON.stringify(localData));
 }
 
 function removeDailyFromLocal(click) {     // 다시 한 번 클릭하여 스타일 적용이 취소되었을 때 localStorage에서 해당 요소를 삭제한다. (두번째 클릭 시 적용되는 것이므로 localStorage에 무언가가 있을 때만 작동할 수밖에 없다.)
-  let localData = JSON.parse(localStorage.getItem("daily-complete"));
+  let localData = JSON.parse(localStorage.getItem("todo_app_daily-complete"));
   localData.splice(localData.indexOf(click.innerText), 1);     // localData 리스트에서 click의 인덱스 번호에 해당하는 요소 (그것이 곧 click)를 삭제 (splice 이용) 
   // + <주의> click은 HTML 한 줄 그대로이므로 innerText를 가져와 index를 찾아야 함! 그냥 click으로 적고 하면 localData에 존재하지 않는 요소이므로 항상 -1 반환!
-  localStorage.setItem("daily-complete", JSON.stringify(localData));
+  localStorage.setItem("todo_app_daily-complete", JSON.stringify(localData));
 }
 
 function getDailyItem() {     // 이미 완료되어 있는 daily todo들 가져와 화면에 deco 칠해진 모습 보여주기 (새로고침 시)  
-  if (localStorage.getItem("daily-complete") !== null) {  
-    const localData = JSON.parse(localStorage.getItem("daily-complete"));
+  if (localStorage.getItem("todo_app_daily-complete") !== null) {  
+    const localData = JSON.parse(localStorage.getItem("todo_app_daily-complete"));
     for (let element of localData) {
       if (element.includes(" ")) {
         element = element.replace(" ", "-");     // id를 통해 요소를 찾을 것이므로 id 작성 형태로 바꾸어줌.

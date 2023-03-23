@@ -29,6 +29,10 @@
         <form id="write-todo">     <!--write todo-->
           <input placeholder="Please write what you have to do🗒️" spellcheck="false">
           <button id="todo-check">✏️</button>
+          <span id="bubble" class="hidden">
+            If you wirte to do which is important with star emoji(this! ⭐), it will be added as a tag content at todo table.
+            (ex) ⭐study javascript / enjoy ⭐ party / feed my pet⭐
+          </span>
         </form>
         <form id="search">     <!--search engine-->
           <input placeholder="Please enter a search term🙂" spellcheck="false">
@@ -93,7 +97,24 @@
           <h1 id="clock">clock</h1>     <!--clock-->
           <h3 id="calendar">calendar</h3>
         </div>
-        <div id="show-todo"></div>     <!--show todo list--> 
+        <div id="show-todo">
+          <table id="todo-table">
+            <th class="tag">tag</th>
+            <th class="todo">todo</th>
+            <th class="button"></th>
+            <th class="button"></th>
+            <!-- <tr id="0">
+              <td class="tag"></td>
+              <td class="todo"></td>
+              <td class="button"><button class="todo-complete">✔️</button></td>
+              <td class="button"><button class="todo-remove">🗑️</button></td>
+            </tr> -->
+          </table>
+          <div id="no-plan">
+            <img src="image/plan.png" alt="plan-img">
+            <h3>Make your own plans!</h3>
+          </div>
+        </div>     <!--show todo list--> 
         <div id="quote"></div>     <!--random quote-->
       </div>
     </div>
@@ -104,5 +125,7 @@
   <script src="js/daily_check.js"></script>
   <script src="js/clock.js"></script>
   <script src="js/background.js"></script>
+  <script src="js/quote.js"></script>
+  <script src="js/todo.js"></script>
 </body>
 </html>
