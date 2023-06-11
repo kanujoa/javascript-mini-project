@@ -1,7 +1,7 @@
 # javascript-mini-project
 <h1>자바스크립트를 이용한 간단한 프로그램 만들기</h1>
 
-<h3>⭐ todo-list-app : 완성작 site ➡️ https://deluxe-tapioca-22562c.netlify.app)</h3>
+<h3>⭐ todo-list-app : 완성작 site ➡️ https://deluxe-tapioca-22562c.netlify.app</h3>
 <h4> todo-list 앱에서 사용한 아이콘 출처 : https://www.flaticon.com/kr/ </h3>
 
 <h3>:pushpin: 10보다 큰 수 찾기 게임 : 완성작 site ➡️ https://regal-hotteok-9e5858.netlify.app</h3>
