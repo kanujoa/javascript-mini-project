@@ -1,0 +1,430 @@
+@font-face {
+  font-family: "NanumSquareRound";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OTWelcomeRA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  margin: 0 auto;
+  font-family: "NanumSquareRound";
+}
+
+body::-webkit-scrollbar {
+  width: 15px;
+}
+
+body::-webkit-scrollbar-thumb {
+  height: 17%;
+  background-color: #bcbcbc;
+  border-radius: 10px;
+}
+
+/* 전체 container */
+#container {
+  display: flex;
+  flex-direction: column;
+  width: 1707px;
+}
+
+/* top 버튼 */
+#top-btn {
+  width: 70px;
+  height: 70px;
+  position: fixed;
+  background-color: rgb(0, 0, 0, 0.7);
+  color: white;
+  top: 90%;
+  left: 95%;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#top-btn p {
+  font-size: 25px;
+}
+
+/* 헤더 */
+header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #999;
+  box-shadow: 0 0 10px 0 #bcbcbc;
+}
+
+header h1 {
+  width: 400px;
+  height: 120px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+header h1 #brand-logo {
+  width: 250px;
+  height: 250px;
+  z-index: -1;
+}
+
+/* 네비게이션 */
+nav {
+  display: flex;
+  align-items: flex-end;
+  padding: 0 200px 30px 0;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 0 50px;
+  border-right: 4px solid #999;
+  margin: 0;
+  height: 60px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #5b5b5b;
+  font-size: 35px;
+  transition: font-size 0.3s linear;
+}
+
+nav ul li a:hover {
+  color: #8c7258;
+  font-size: 45px;
+}
+
+/* 상단 이미지 슬라이더 */
+#slider {
+  width: 1707px;
+  height: 700px;
+  box-shadow: 0 100px 100px -100px #bcbcbc;
+  font-family: "OTWelcomeRA";
+}
+
+#slider img {
+  width: 1707px;
+  height: 700px;
+}
+
+#slider #top-slider-text-1 {
+  width: 1707px;
+  position: absolute;
+  top: 25%;
+}
+
+#slider #top-slider-text-1 p {
+  font-size: 75px;
+  font-weight: 600;
+  margin: 0;
+  padding-left: 5%;
+}
+
+#slider #top-slider-text-2 {
+  width: 1707px;
+  margin: 0;
+  position: absolute;
+  top: 23%;
+}
+
+#slider #top-slider-text-2 p {
+  font-size: 75px;
+  font-weight: 600;
+  text-align: center;
+}
+
+#slider #top-slider-text-3 {
+  width: 1707px;
+  margin: 0;
+  position: absolute;
+  top: 40%;
+}
+
+#slider #top-slider-text-3 p {
+  font-size: 75px;
+  font-weight: 600;
+  color: white;
+  text-align: right;
+  padding-right: 5%;
+}
+
+/* 소개 */
+#intro {
+  width: 1707px;
+  height: 770px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#intro #coffee-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 650px;
+  height: 650px;
+}
+
+#intro #coffee-img img {
+  width: 650px;
+  height: 650px;
+}
+
+#intro #intro-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 650px;
+  padding-right: 30px;
+}
+
+#intro #intro-text h2 {
+  font-family: "OTWelcomeRA";
+  font-size: 70px;
+  margin-bottom: 20px;
+  color: #8c7258;
+}
+
+#intro #intro-text p {
+  font-size: 30px;
+}
+
+/* 구독 */
+#subscribe {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./img/coffeebean.png");
+  background-repeat: no-repeat;
+  background-size: 1707px 600px;
+  box-shadow: 100px 0 100px 0 #5b5b5b;
+}
+
+#subscribe #box {
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  width: 1000px;
+  height: 400px;
+}
+
+#subscribe #box p {
+  font-size: 43px;
+  font-weight: 700;
+}
+
+#subscribe #box button {
+  border-radius: 20px;
+  width: 250px;
+  height: 80px;
+  font-size: 30px;
+  font-weight: 600;
+  border: 3px solid #999;
+  cursor: pointer;
+  background: none;
+  transition: background-color 0.2s linear;
+  font-family: "OTWelcomeRA";
+  padding-top: 10px;
+}
+
+#subscribe #box button:hover {
+  background-color: olivedrab;
+}
+
+/* 서비스 섹션 */
+#service {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+#service #service-section-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#service #service-section-title h2 {
+  font-size: 60px;
+  font-weight: 600;
+  color: #8c7258;
+  font-family: "OTWelcomeRA";
+  padding-top: 25px;
+}
+
+#service #service-list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 150px 0;
+}
+
+#service #service-list div p,
+#service #service-list div h3 {
+  margin: 0;
+}
+
+#service-1,
+#service-2,
+#service-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  margin: 20px;
+  border: 2px dashed #8c7258;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+#service-3 {
+  height: 303.29px;
+}
+
+#service div img {
+  width: 80px;
+  height: 80px;
+}
+
+#service div h3 {
+  padding-top: 30px;
+  font-size: 30px;
+}
+
+#service div p {
+  font-size: 20px;
+  padding-top: 30px;
+  text-align: center;
+}
+
+/* 인기 상품 섹션 */
+#goods {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 150px;
+}
+
+#goods-section-title {
+  width: 100%;
+  height: 150px;
+  border-top: 5px dotted #8c7258;
+  border-bottom: 5px dotted #8c7258;
+  background-color: rgb(140, 114, 88, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 100px 0 100px 0 #999;
+}
+
+#goods-section-title h2 {
+  font-size: 70px;
+  font-family: "OTWelcomeRA";
+  padding-top: 20px;
+}
+
+#goods-photo-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 100px;
+}
+
+#right-arrow,
+#left-arrow {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#goods-photo {
+  border: 1px solid #bcbcbc;
+  height: 601px;
+  position: relative;
+}
+
+#goods-photo img {
+  width: 500px;
+  height: 600px;
+}
+
+.goods-info {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.5);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.goods-info p:first-child {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.goods-info p:last-child {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.not-visible {
+  display: none;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #eee;
+  padding: 20px 0;
+}
+
+#tel,
+#address {
+  color: #999;
+  font-size: 15px;
+}
