@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coffee Club</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@200;400;600&display=swap"
-      rel="stylesheet"
-    /> -->
   </head>
   <body style="overflow-x: hidden">
     <div id="container" class="scroll-bar">
@@ -33,26 +27,41 @@
       <!--이미지 슬라이더-->
       <div id="slider">
         <!--첫번째 이미지-->
-        <img src="./img/topSliderImg1.png" />
-        <div id="top-slider-text-1">
-          <p>원두 커피<br />매달 구독 서비스 개시</p>
+        <div class="slide">
+          <img src="./img/topSliderImg1.png" />
+          <div id="top-slider-text-1">
+            <p>원두 커피<br />매달 구독 서비스 개시</p>
+          </div>
         </div>
         <!--두번째 이미지-->
-        <!-- <img src="./img/topSliderImg2.png" />
-        <div id="top-slider-text-2">
-          <p>
-            당신만을 위한 <br />
-            신선한 <span style="color: #8c7258">스페셜티 커피</span>
-          </p>
-        </div> -->
+        <div class="slide">
+          <img src="./img/topSliderImg2.png" />
+          <div id="top-slider-text-2">
+            <p>
+              당신만을 위한 <br />
+              <span style="display: block; padding-top: 35px"
+                >신선한 <span style="color: #8c7258">스페셜티 커피</span></span
+              >
+            </p>
+          </div>
+        </div>
         <!--세번째 이미지-->
-        <!-- <img src="./img/topSliderImg3.png" />
-        <div id="top-slider-text-3">
-          <p>
-            더 나은 세상을 지향하는 <br />
-            <span style="color: #ede9e5">COFFEE CLUB</span>
-          </p>
-        </div> -->
+        <div class="slide">
+          <img src="./img/topSliderImg3.png" />
+          <div id="top-slider-text-3">
+            <p>
+              더 나은 세상을 지향하는 <br />
+              <span style="color: #ede9e5">COFFEE CLUB</span>
+            </p>
+          </div>
+        </div>
+        <!--다시 첫번째 이미지-->
+        <div class="slide">
+          <img src="./img/topSliderImg1.png" />
+          <div id="top-slider-text-1">
+            <p>원두 커피<br />매달 구독 서비스 개시</p>
+          </div>
+        </div>
       </div>
       <!--커피클럽 소개 섹션-->
       <div id="intro">
@@ -75,9 +84,24 @@
       </div>
       <!--커피클럽 구독 섹션-->
       <div id="subscribe">
+        <div id="tab-menu">
+          <div class="tab"><p>구독하기</p></div>
+          <div class="tab"><p>신규 회원 특가</p></div>
+          <div class="tab"><p>Summer Event</p></div>
+        </div>
         <div id="box">
           <p>지금 바로 COFFEE CLUB의 커피를 구독해 보세요!</p>
           <button>구독하기</button>
+          <!-- <p>⭐ 신규 회원 특가 ⭐</p>
+          <p>
+            매월 <span style="text-decoration: line-through">\50000</span> →
+            \30000
+          </p> -->
+          <!-- <p>🏖️ Summer Event 🏖️</p>
+          <p style="text-align: center">
+            피서지에서 Coffee Club 제품 인증샷을 찍어주신 분께<br /><br />
+            🎫15% 할인쿠폰🎫 제공!
+          </p> -->
         </div>
       </div>
       <!--커피클럽 서비스 섹션-->
@@ -109,7 +133,7 @@
       <div id="goods">
         <div id="goods-section-title"><h2>인기 상품</h2></div>
         <div id="goods-photo-container">
-          <img src="./img/left-arrow.png" id="right-arrow" />
+          <img src="./img/left-arrow.png" id="left-arrow" />
           <div id="goods-photo">
             <div class="not-visible">
               <p>캘리포니아 커피</p>
@@ -117,11 +141,8 @@
               <p>\15000</p>
             </div>
             <img src="./img/california-coffee.webp" />
-            <!-- <img src="./img/guatemala-coffee.webp" /> -->
-            <!-- <img src="./img/kenya-coffee.webp" /> -->
-            <!-- <img src="./img/indonesia-coffee.webp" /> -->
           </div>
-          <img src="./img/right-arrow.png" id="left-arrow" />
+          <img src="./img/right-arrow.png" id="right-arrow" />
         </div>
       </div>
       <!--footer-->
@@ -134,4 +155,7 @@
   <script src="scroll1.js"></script>
   <script src="scroll2.js"></script>
   <script src="goodsMouseEnter.js"></script>
+  <script src="topImgSlider.js"></script>
+  <script src="goodsImgSlider.js"></script>
+  <script src="tabButton.js"></script>
 </html>
